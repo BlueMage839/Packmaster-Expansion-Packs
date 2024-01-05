@@ -1,7 +1,10 @@
 package thePackmaster.cards.royaltypack;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import thePackmaster.actions.royaltypack.TributeOrAusterityAction;
 import thePackmaster.cards.royaltypack.optioncards.WillpowerAusterity;
 import thePackmaster.cards.royaltypack.optioncards.WillpowerTribute;
@@ -25,12 +28,12 @@ public class Willpower extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        Wiz.atb(new ApplyPowerAction(AbstractDungeon.player,
+                AbstractDungeon.player,
+                new ArtifactPower(AbstractDungeon.player, 1)));
+
         AbstractRoyaltyCard willTributeChoiceCard = new WillpowerTribute();
         AbstractRoyaltyCard willAusterityChoiceCard = new WillpowerAusterity();
-        if (this.upgraded){
-            willTributeChoiceCard.upgrade();
-            willAusterityChoiceCard.upgrade();
-        }
 
         Wiz.atb(new TributeOrAusterityAction(willTributeChoiceCard, willAusterityChoiceCard));
     }
