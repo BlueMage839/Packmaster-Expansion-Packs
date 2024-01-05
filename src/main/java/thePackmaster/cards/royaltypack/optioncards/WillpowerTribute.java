@@ -40,9 +40,6 @@ public class WillpowerTribute extends AbstractRoyaltyCard {
         Wiz.atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
         Wiz.atb(new ApplyPowerAction(AbstractDungeon.player,
                 AbstractDungeon.player,
-                new ArtifactPower(AbstractDungeon.player, 1)));
-        Wiz.atb(new ApplyPowerAction(AbstractDungeon.player,
-                AbstractDungeon.player,
                 new BufferPower(AbstractDungeon.player, 1)));
     }
 }
