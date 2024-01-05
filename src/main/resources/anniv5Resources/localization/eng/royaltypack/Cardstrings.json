@@ -32,7 +32,7 @@
   },
   "${ModID}:ForcefieldAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Gain !M! Temp HP."
+    "DESCRIPTION": "Do nothing."
   },
   "${ModID}:ThrowSoulstones": {
     "NAME": "Throw Soulstones",

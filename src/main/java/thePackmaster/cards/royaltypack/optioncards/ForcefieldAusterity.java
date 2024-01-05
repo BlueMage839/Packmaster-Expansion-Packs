@@ -24,12 +24,6 @@ public class ForcefieldAusterity extends AbstractRoyaltyCard {
         baseMagicNumber = magicNumber = temporaryHPGained;
     }
 
-    public ForcefieldAusterity(int temporaryHPGained){
-        super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
-                "anniv5Resources/images/cards/OptionAusterity.png");
-        this.temporaryHPGained = temporaryHPGained;
-        baseMagicNumber = magicNumber = this.temporaryHPGained;
-    }
 
     @Override
     public void upp() {
@@ -43,7 +37,6 @@ public class ForcefieldAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption() {
-        Wiz.atb(new AddTemporaryHPAction(AbstractDungeon.player,
-                AbstractDungeon.player, this.magicNumber));
+
     }
 }
