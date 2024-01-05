@@ -34,8 +34,6 @@ public class WillpowerAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption() {
-        Wiz.atb(new ApplyPowerAction(AbstractDungeon.player,
-                AbstractDungeon.player,
-                new ArtifactPower(AbstractDungeon.player, 1)));
+
     }
 }
