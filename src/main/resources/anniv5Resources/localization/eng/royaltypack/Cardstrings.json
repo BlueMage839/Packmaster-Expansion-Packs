@@ -63,16 +63,16 @@
   },
   "${ModID}:Willpower": {
     "NAME": "Willpower",
-    "DESCRIPTION": "${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer. ${ModID}:Austerity: Gain 1 Artifact. ",
-    "UPGRADE_DESCRIPTION": "Innate. NL ${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer. ${ModID}:Austerity: Gain 1 Artifact. "
+    "DESCRIPTION": "Gain 1 Artifact. ${ModID}:Tribute 10: Gain 1 Buffer.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain 1 Artifact. ${ModID}:Tribute 10: Gain 1 Buffer."
   },
   "${ModID}:WillpowerTribute": {
     "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 10: Gain 1 Artifact and 1 Buffer."
+    "DESCRIPTION": "${ModID}:Tribute 10: 1 Buffer."
   },
   "${ModID}:WillpowerAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Gain 1 Artifact."
+    "DESCRIPTION": "Do nothing."
   },
   "${ModID}:MajesticBloodline": {
     "NAME": "Majestic Bloodline",
