@@ -24,7 +24,7 @@
   },
   "${ModID}:Forcefield": {
     "NAME": "Forcefield",
-    "DESCRIPTION": "Discard one random card. ${ModID}:Tribute 8: Gain !${ModID}:m2! Temp HP. ${ModID}:Austerity: Gain !M! Temp HP."
+    "DESCRIPTION": "Discard one random card. Gain !M! Temp HP. ${ModID}:Tribute 8: Gain !${ModID}:m2! Temp HP."
   },
   "${ModID}:ForcefieldTribute": {
     "NAME": "Tribute",
