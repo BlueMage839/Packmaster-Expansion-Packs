@@ -14,6 +14,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class MoreSupplies extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("MoreSupplies");
+    public final static int TRIBUTE_GOLD_AMOUNT = 30;
+    public final static int TRIBUTE_GOLD_UPGRADED_AMOUNT = 25;
 
     public MoreSupplies(){
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -29,7 +31,13 @@ public class MoreSupplies extends AbstractRoyaltyCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         Wiz.atb(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
 
-        AbstractRoyaltyCard moreSuppliesTributeChoiceCard = new MoreSuppliesTribute();
+        AbstractRoyaltyCard moreSuppliesTributeChoiceCard;
+        if (!this.upgraded){
+            moreSuppliesTributeChoiceCard = new MoreSuppliesTribute(TRIBUTE_GOLD_AMOUNT);
+        }
+        else {
+            moreSuppliesTributeChoiceCard = new MoreSuppliesTribute(TRIBUTE_GOLD_UPGRADED_AMOUNT);
+        }
         AbstractRoyaltyCard moreSuppliesAusterityChoiceCard = new MoreSuppliesAusterity();
 
         Wiz.atb(new TributeOrAusterityAction(moreSuppliesTributeChoiceCard, moreSuppliesAusterityChoiceCard));
