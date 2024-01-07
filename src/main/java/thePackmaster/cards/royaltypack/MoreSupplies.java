@@ -1,6 +1,8 @@
 package thePackmaster.cards.royaltypack;
 
+import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.actions.royaltypack.TributeOrAusterityAction;
 import thePackmaster.cards.royaltypack.optioncards.MoreSuppliesAusterity;
@@ -25,12 +27,10 @@ public class MoreSupplies extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        Wiz.atb(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
+
         AbstractRoyaltyCard moreSuppliesTributeChoiceCard = new MoreSuppliesTribute();
         AbstractRoyaltyCard moreSuppliesAusterityChoiceCard = new MoreSuppliesAusterity();
-        if (this.upgraded){
-            moreSuppliesTributeChoiceCard.upgrade();
-            moreSuppliesAusterityChoiceCard.upgrade();
-        }
 
         Wiz.atb(new TributeOrAusterityAction(moreSuppliesTributeChoiceCard, moreSuppliesAusterityChoiceCard));
     }
