@@ -19,7 +19,7 @@ public class MajesticBloodlineTribute extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("MajesticBloodlineTribute");
     private AbstractCard cardToPlayAgain;
-    public final static int TRIBUTE_GOLD_AMOUNT = 10;
+    public final static int TRIBUTE_GOLD_AMOUNT = 15;
 
     public MajesticBloodlineTribute(){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,

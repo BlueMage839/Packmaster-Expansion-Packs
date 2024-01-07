@@ -76,11 +76,11 @@
   },
   "${ModID}:MajesticBloodline": {
     "NAME": "Majestic Bloodline",
-    "DESCRIPTION": "Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 10: play this card again. Exhaust."
+    "DESCRIPTION": "Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 15: play this card again. Exhaust."
   },
   "${ModID}:MajesticBloodlineTribute": {
     "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 10: play this card again."
+    "DESCRIPTION": "${ModID}:Tribute 15: play this card again."
   },
   "${ModID}:MajesticBloodlineAusterity": {
     "NAME": "Austerity",
