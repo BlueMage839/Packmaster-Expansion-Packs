@@ -40,13 +40,14 @@ public class NobleStrikeAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption(){
-        this.addToBot(new GainGoldAction(GOLD_GAINED));
         for (int i = 0; i < GOLD_GAINED; i++){
             AbstractDungeon.effectList.add(new GainPennyEffect(AbstractDungeon.player,
-                    player.drawX, player.drawY,
-                    player.drawX, Settings.SAVED_HEIGHT, false));
+                    player.drawX, Settings.SAVED_HEIGHT,
+                    player.drawX, player.drawY * 1.2f,
+                    false));
         }
-        //AbstractDungeon.effectList.add(new GainGoldTextEffect(GOLD_GAINED));
+        this.addToBot(new GainGoldAction(GOLD_GAINED));
+        AbstractDungeon.effectList.add(new GainGoldTextEffect(0));
         //CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
         this.addToBot(new DrawCardAction(player, magicNumber));
     }
