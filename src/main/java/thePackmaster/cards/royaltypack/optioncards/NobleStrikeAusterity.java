@@ -5,12 +5,15 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.GainGoldTextEffect;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 import thePackmaster.ThePackmaster;
 import thePackmaster.cards.royaltypack.AbstractRoyaltyCard;
 
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 import static thePackmaster.SpireAnniversary5Mod.makeID;
 
 @AutoAdd.Ignore
@@ -38,8 +41,13 @@ public class NobleStrikeAusterity extends AbstractRoyaltyCard {
     @Override
     public void onChoseThisOption(){
         this.addToBot(new GainGoldAction(GOLD_GAINED));
-        AbstractDungeon.effectList.add(new GainGoldTextEffect(GOLD_GAINED));
-        CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-        this.addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
+        for (int i = 0; i < GOLD_GAINED; i++){
+            AbstractDungeon.effectList.add(new GainPennyEffect(AbstractDungeon.player,
+                    player.drawX, player.drawY,
+                    player.drawX, Settings.SAVED_HEIGHT, false));
+        }
+        //AbstractDungeon.effectList.add(new GainGoldTextEffect(GOLD_GAINED));
+        //CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
+        this.addToBot(new DrawCardAction(player, magicNumber));
     }
 }
