@@ -16,12 +16,12 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class MoreSuppliesTribute extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("MoreSuppliesTribute");
-    public static int TRIBUTE_GOLD_AMOUNT;
 
     public MoreSuppliesTribute(int tribute_gold_amount){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
                 "anniv5Resources/images/cards/OptionTribute.png");
-        TRIBUTE_GOLD_AMOUNT = tribute_gold_amount;
+        baseMagicNumber = tribute_gold_amount;
+        magicNumber = baseMagicNumber;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class MoreSuppliesTribute extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption() {
-        Wiz.atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
+        Wiz.atb(new PayTributeAction(magicNumber));
         for (int i = 0; i < AbstractDungeon.player.potionSlots; i++){
             Wiz.atb(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(false)));
         }
