@@ -15,7 +15,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class BoundlessTalentTribute extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("BoundlessTalentTribute");
-    public final static int TRIBUTE_GOLD_AMOUNT = 5;
+    public final static int TRIBUTE_GOLD_AMOUNT = 10;
 
     public BoundlessTalentTribute(){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
