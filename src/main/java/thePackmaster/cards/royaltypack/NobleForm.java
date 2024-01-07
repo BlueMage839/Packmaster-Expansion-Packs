@@ -20,7 +20,7 @@ public class NobleForm extends AbstractRoyaltyCard {
     @Override
     public void upp() {
         this.upgraded = true;
-        this.name = "True " + this.name;
+        this.name = cardStrings.EXTENDED_DESCRIPTION[0];
     }
 
     @Override

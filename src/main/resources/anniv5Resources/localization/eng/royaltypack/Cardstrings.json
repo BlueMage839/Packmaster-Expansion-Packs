@@ -101,6 +101,7 @@
   "${ModID}:NobleForm": {
     "NAME": "Noble Form",
     "DESCRIPTION": "When you discard a card, draw a card. When you lose HP, gain 5 Gold.",
+    "EXTENDED_DESCRIPTION": ["True Noble Form"],
     "UPGRADE_DESCRIPTION": "When you discard or play a card, draw a card. When you lose Gold or HP, gain 5 Gold."
   }
 }
