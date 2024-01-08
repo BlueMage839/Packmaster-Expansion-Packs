@@ -30,7 +30,7 @@ public class MajesticBloodline extends AbstractRoyaltyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        isInnate = true;
     }
 
     @Override
