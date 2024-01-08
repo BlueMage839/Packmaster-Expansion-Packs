@@ -1,6 +1,7 @@
 package thePackmaster.actions.royaltypack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -36,12 +37,11 @@ public class BoundlessTalentAction extends AbstractGameAction {
     private void doAction(){
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             if (AbstractDungeon.handCardSelectScreen.selectedCards.size() != 0){
-                AbstractCard tmpCard = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard().
-                        makeStatEquivalentCopy();
-                AbstractDungeon.player.hand.addToHand(AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard());
-                AbstractDungeon.player.hand.addToHand(tmpCard);
+                AbstractCard tmpCard = AbstractDungeon.handCardSelectScreen.selectedCards.getBottomCard();
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = false;
                 AbstractDungeon.handCardSelectScreen.selectedCards.clear();
+                AbstractDungeon.player.hand.addToHand(tmpCard);
+                this.addToTop(new MakeTempCardInHandAction(tmpCard.makeStatEquivalentCopy()));
                 this.isDone = true;
             }
         }
