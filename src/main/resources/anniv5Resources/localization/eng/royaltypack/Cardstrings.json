@@ -76,7 +76,8 @@
   },
   "${ModID}:MajesticBloodline": {
     "NAME": "Majestic Bloodline",
-    "DESCRIPTION": "Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 15: play this card again. Exhaust."
+    "DESCRIPTION": "Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 15: play this again. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Shuffle 1 of !M! random Powers to your draw pile. ${ModID}:Tribute 15: play this again. Exhaust."
   },
   "${ModID}:MajesticBloodlineTribute": {
     "NAME": "Tribute",
