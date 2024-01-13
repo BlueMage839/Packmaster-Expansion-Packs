@@ -89,13 +89,12 @@
   },
   "${ModID}:MoreSupplies": {
     "NAME": "More Supplies!",
-    "DESCRIPTION": "Gain a random Potion. ${ModID}:Tribute !M!: fill your Potion Belt with random Potions.",
-    "UPGRADE_DESCRIPTION": "Gain a random Potion. ${ModID}:Tribute !M!: fill your Potion Belt with random Potions."
+    "DESCRIPTION": "Gain a random Potion. ${ModID}:Tribute 30: fill your Potion Belt with random Potions.",
+    "UPGRADE_DESCRIPTION": "Gain a random Potion. ${ModID}:Tribute 25: fill your Potion Belt with random Potions."
   },
   "${ModID}:MoreSuppliesTribute": {
     "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute !M!: fill your Potion Belt with random Potions.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute !M!: fill your Potion Belt with random Potions."
+    "DESCRIPTION": "${ModID}:Tribute !M!: fill your Potion Belt with random Potions."
   },
   "${ModID}:MoreSuppliesAusterity": {
     "NAME": "Austerity",
