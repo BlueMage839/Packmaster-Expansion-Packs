@@ -36,17 +36,17 @@
   },
   "${ModID}:ThrowSoulstones": {
     "NAME": "Throw Soulstones",
-    "DESCRIPTION": "${ModID}:Tribute 10: deal !D! damage to ALL enemies AND play this card again. ${ModID}:Austerity: Deal !${ModID}:sd! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. ${ModID}:Tribute 30: deal !${ModID}:sd! damage to ALL enemies, then Exhaust."
   },
   "${ModID}:ThrowSoulstonesTribute": {
     "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 10: Deal !D! damage to ALL enemies AND play this card again.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 10: Deal !D! damage to ALL enemies AND play this card again."
+    "DESCRIPTION": "${ModID}:Tribute 30: deal !D! damage to ALL enemies, then Exhaust.",
+    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 30: deal !D! damage to ALL enemies, then Exhaust."
   },
   "${ModID}:ThrowSoulstonesAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Austerity: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Do nothing.",
+    "UPGRADE_DESCRIPTION": "$Do nothing."
   },
   "${ModID}:BoundlessTalent": {
     "NAME": "Boundless Talent",
