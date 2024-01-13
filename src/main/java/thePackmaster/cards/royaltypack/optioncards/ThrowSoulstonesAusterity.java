@@ -19,18 +19,10 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ThrowSoulstonesAusterity extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("ThrowSoulstonesAusterity");
-    public final static int DAMAGE = 5;
 
     public ThrowSoulstonesAusterity(){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, ThePackmaster.Enums.PACKMASTER_RAINBOW,
                 "anniv5Resources/images/cards/OptionAusterity.png");
-        baseDamage = damage = DAMAGE;
-    }
-
-    public ThrowSoulstonesAusterity(int damageToDo){
-        super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, ThePackmaster.Enums.PACKMASTER_RAINBOW,
-                "anniv5Resources/images/cards/OptionAusterity.png");
-        baseDamage = damage = damageToDo;
     }
 
     @Override
@@ -45,14 +37,7 @@ public class ThrowSoulstonesAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption(){
-        if (Settings.FAST_MODE) {
-            this.addToBot(new VFXAction(new BlizzardEffect(5, AbstractDungeon.getMonsters().shouldFlipVfx()), 0.25F));
-        } else {
-            this.addToBot(new VFXAction(new BlizzardEffect(5, AbstractDungeon.getMonsters().shouldFlipVfx()), 0.5F));
-        }
-        int[] damageMatrix = DamageInfo.createDamageMatrix(this.baseDamage, true);
-        DamageAllEnemiesAction dmgAll = new DamageAllEnemiesAction(AbstractDungeon.player, damageMatrix, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE);
-        addToBot(dmgAll);
+
     }
 
 
