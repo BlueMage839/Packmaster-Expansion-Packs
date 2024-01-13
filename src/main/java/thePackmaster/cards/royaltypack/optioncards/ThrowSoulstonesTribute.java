@@ -4,6 +4,7 @@ import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -25,8 +26,8 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class ThrowSoulstonesTribute extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("ThrowSoulstonesTribute");
-    public final static int DAMAGE = 15;
-    public final static int TRIBUTE_GOLD_AMOUNT = 10;
+    public final static int DAMAGE = 18;
+    public final static int TRIBUTE_GOLD_AMOUNT = 30;
     private AbstractCard originalThrowSoulstonesCard;
 
     public ThrowSoulstonesTribute(){
@@ -64,10 +65,7 @@ public class ThrowSoulstonesTribute extends AbstractRoyaltyCard {
         DamageAllEnemiesAction dmgAll = new DamageAllEnemiesAction(AbstractDungeon.player, damageMatrix, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE);
         addToBot(dmgAll);
         if (originalThrowSoulstonesCard != null){
-            AbstractCard tmp = originalThrowSoulstonesCard.makeSameInstanceOf();
-            tmp.purgeOnUse = true;
-
-            Wiz.atb(new NewQueueCardAction(tmp, false));
+            originalThrowSoulstonesCard.exhaust = true;
         }
         else {
             Logger logger = LogManager.getLogger(ID);
