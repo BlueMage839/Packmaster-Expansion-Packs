@@ -15,20 +15,15 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class BoundlessTalentAusterity extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("BoundlessTalentAusterity");
-    private int maxDrawHandSize;
 
     public BoundlessTalentAusterity(){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
                         "anniv5Resources/images/cards/OptionAusterity.png");
-        this.maxDrawHandSize = 4;
-        baseMagicNumber = magicNumber = this.maxDrawHandSize;
     }
 
     public BoundlessTalentAusterity(int maxDrawHandSize){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
                 "anniv5Resources/images/cards/OptionAusterity.png");
-        this.maxDrawHandSize = maxDrawHandSize;
-        baseMagicNumber = magicNumber = this.maxDrawHandSize;
     }
 
     @Override
@@ -43,10 +38,6 @@ public class BoundlessTalentAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption() {
-        int amountOfCardsToDraw = maxDrawHandSize - AbstractDungeon.player.hand.size();
-        for (int i = 0; i < amountOfCardsToDraw; i++){
-            Wiz.atb(new DrawCardAction(AbstractDungeon.player, 1));
-        }
 
     }
 }
