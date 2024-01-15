@@ -1,8 +1,8 @@
 {
   "${ModID}:NobleStrike": {
     "NAME": "Noble Strike",
-    "DESCRIPTION": "Deal !D! damage. ${ModID}:Tribute 5: Draw an Attack. ${ModID}:Austerity: Gain 5 Gold and draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. ${ModID}:Tribute 5: Draw !M! Attacks. ${ModID}:Austerity: Gain 5 Gold and draw !M! cards. "
+    "DESCRIPTION": "Deal !D! damage. Gain 5 Gold. Draw a card. NL ${ModID}:Tribute 5: Draw an Attack.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain 5 Gold. Draw !M! cards. NL ${ModID}:Tribute 5: Draw !M! Attacks."
   },
   "${ModID}:NobleStrikeTribute": {
     "NAME": "Tribute",
