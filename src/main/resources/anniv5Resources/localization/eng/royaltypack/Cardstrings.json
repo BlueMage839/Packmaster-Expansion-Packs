@@ -50,16 +50,16 @@
   },
   "${ModID}:BoundlessTalent": {
     "NAME": "Boundless Talent",
-    "DESCRIPTION": "${ModID}:Tribute 10: Copy one card in your hand. ${ModID}:Austerity: Draw until you have !M!.  NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "${ModID}:Tribute 10: Copy one card in your hand. ${ModID}:Austerity: Draw until you have !M!. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Draw until you have !M!. NL ${ModID}:Tribute 10: Copy one card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw until you have !M!. ${ModID}:Tribute 10: Copy one card in your hand. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:BoundlessTalentTribute": {
     "NAME": "Tribute",
-    "DESCRIPTION": "${ModID}:Tribute 5: Copy one card in your hand."
+    "DESCRIPTION": "${ModID}:Tribute 10: Copy one card in your hand."
   },
   "${ModID}:BoundlessTalentAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Draw until you have !M!."
+    "DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:Willpower": {
     "NAME": "Willpower",
