@@ -15,7 +15,7 @@
   },
   "${ModID}:NobleSlash": {
     "NAME": "Noble Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Discard a random card. NL Draw one less the next turn."
+    "DESCRIPTION": "Deal !D! damage. NL Discard a random card. Draw one less the next turn."
   },
   "${ModID}:WindShield": {
     "NAME": "Wind Shield",
@@ -31,7 +31,7 @@
   },
   "${ModID}:ForcefieldAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Do nothing."
+    "DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:ThrowSoulstones": {
     "NAME": "Throw Soulstones",
@@ -44,8 +44,8 @@
   },
   "${ModID}:ThrowSoulstonesAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Do nothing.",
-    "UPGRADE_DESCRIPTION": "$Do nothing."
+    "DESCRIPTION": "Nothing else happens.",
+    "UPGRADE_DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:BoundlessTalent": {
     "NAME": "Boundless Talent",
@@ -71,7 +71,7 @@
   },
   "${ModID}:WillpowerAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Do nothing."
+    "DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:MajesticBloodline": {
     "NAME": "Majestic Bloodline",
@@ -97,7 +97,7 @@
   },
   "${ModID}:MoreSuppliesAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Do nothing."
+    "DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:NobleForm": {
     "NAME": "Noble Form",
