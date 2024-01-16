@@ -11,8 +11,7 @@
   },
   "${ModID}:NobleStrikeAusterity": {
     "NAME": "Austerity",
-    "DESCRIPTION": "Gain 5 Gold and draw a card.",
-    "UPGRADE_DESCRIPTION": "Gain 5 Gold and draw !M! cards."
+    "DESCRIPTION": "Nothing else happens."
   },
   "${ModID}:NobleSlash": {
     "NAME": "Noble Slash",
