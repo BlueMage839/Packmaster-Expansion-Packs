@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -16,11 +17,13 @@ import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.ThePackmaster;
+import thePackmaster.actions.replicatorspack.ImmediateExhaustCardAction;
 import thePackmaster.actions.royaltypack.PayTributeAction;
 import thePackmaster.cards.royaltypack.AbstractRoyaltyCard;
 import thePackmaster.util.Wiz;
 
 import static thePackmaster.SpireAnniversary5Mod.makeID;
+import static thePackmaster.util.Wiz.atb;
 
 @AutoAdd.Ignore
 public class ThrowSoulstonesTribute extends AbstractRoyaltyCard {
@@ -55,7 +58,7 @@ public class ThrowSoulstonesTribute extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption(){
-        Wiz.atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
+        atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
         if (Settings.FAST_MODE) {
             this.addToBot(new VFXAction(new BlizzardEffect(this.damage, AbstractDungeon.getMonsters().shouldFlipVfx()), 0.25F));
         } else {
@@ -65,7 +68,7 @@ public class ThrowSoulstonesTribute extends AbstractRoyaltyCard {
         DamageAllEnemiesAction dmgAll = new DamageAllEnemiesAction(AbstractDungeon.player, damageMatrix, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE);
         addToBot(dmgAll);
         if (originalThrowSoulstonesCard != null){
-            originalThrowSoulstonesCard.exhaust = true;
+            atb(new ImmediateExhaustCardAction(originalThrowSoulstonesCard));
         }
         else {
             Logger logger = LogManager.getLogger(ID);
