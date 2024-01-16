@@ -15,7 +15,7 @@
   },
   "${ModID}:NobleSlash": {
     "NAME": "Noble Slash",
-    "DESCRIPTION": "Deal !D! damage. Draw one less the next turn. Discard a random card."
+    "DESCRIPTION": "Deal !D! damage. NL Discard a random card. NL Draw one less the next turn."
   },
   "${ModID}:WindShield": {
     "NAME": "Wind Shield",
