@@ -17,17 +17,15 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class NobleStrikeAusterity extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("NobleStrikeAusterity");
-    public final static int GOLD_GAINED = 5;
 
     public NobleStrikeAusterity(){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
                 "anniv5Resources/images/cards/OptionAusterity.png");
-        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void upp() {
-        this.upgradeMagicNumber(1);
+
     }
 
     @Override
@@ -37,9 +35,6 @@ public class NobleStrikeAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption(){
-        this.addToBot(new GainGoldAction(GOLD_GAINED));
-        AbstractDungeon.effectList.add(new GainGoldTextEffect(GOLD_GAINED));
-        CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-        this.addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
+
     }
 }
