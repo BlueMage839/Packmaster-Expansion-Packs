@@ -1,7 +1,9 @@
 package thePackmaster.cards.royaltypack.optioncards;
 
 import basemod.AutoAdd;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import thePackmaster.ThePackmaster;
 import thePackmaster.actions.royaltypack.DrawSpecificCardTypeAction;
@@ -37,7 +39,7 @@ public class NobleStrikeTribute extends AbstractRoyaltyCard {
     public void onChoseThisOption(){
         Wiz.atb(new PayTributeAction(TRIBUTE_GOLD_AMOUNT));
         for (int i = 0; i < magicNumber; i++){
-            Wiz.atb(new DrawSpecificCardTypeAction(CardType.ATTACK));
+            this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
         }
     }
 }

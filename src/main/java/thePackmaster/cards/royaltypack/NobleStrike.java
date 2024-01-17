@@ -29,6 +29,7 @@ public class NobleStrike extends AbstractRoyaltyCard {
 
     @Override
     public void upp() {
+        this.upgradeDamage(3);
         this.upgradeMagicNumber(1);
     }
 
@@ -38,7 +39,7 @@ public class NobleStrike extends AbstractRoyaltyCard {
         this.addToBot(new GainGoldAction(GOLD_GAINED));
         AbstractDungeon.effectList.add(new GainGoldTextEffect(GOLD_GAINED));
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-        this.addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
+        this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
 
         AbstractRoyaltyCard nsTributeChoiceCard = new NobleStrikeTribute();
         AbstractRoyaltyCard nsAusterityChoiceCard = new NobleStrikeAusterity();
