@@ -49,8 +49,8 @@
   },
   "${ModID}:BoundlessTalent": {
     "NAME": "Boundless Talent",
-    "DESCRIPTION": "Draw until you have !M!. NL ${ModID}:Tribute 10: Copy one card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw until you have !M!. ${ModID}:Tribute 10: Copy one card in your hand. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Draw cards until you have !M! in your hand. NL ${ModID}:Tribute 10: Copy one card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw cards until you have !M! in your hand. ${ModID}:Tribute 10: Copy one card in your hand. NL Exhaustive !stslib:ex!."
   },
   "${ModID}:BoundlessTalentTribute": {
     "NAME": "Tribute",
