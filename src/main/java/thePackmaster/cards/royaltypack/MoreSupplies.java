@@ -29,8 +29,6 @@ public class MoreSupplies extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        Wiz.atb(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
-
         AbstractRoyaltyCard moreSuppliesTributeChoiceCard;
         if (!this.upgraded){
             moreSuppliesTributeChoiceCard = new MoreSuppliesTribute(BASE_TRIBUTE_COST);

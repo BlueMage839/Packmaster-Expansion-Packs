@@ -34,6 +34,6 @@ public class MoreSuppliesAusterity extends AbstractRoyaltyCard {
 
     @Override
     public void onChoseThisOption() {
-
+        Wiz.atb(new ObtainPotionAction(AbstractDungeon.returnRandomPotion(true)));
     }
 }
