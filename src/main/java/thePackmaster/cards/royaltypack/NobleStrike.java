@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.GainGoldTextEffect;
+import thePackmaster.actions.royaltypack.NobleStrikeAttackAction;
 import thePackmaster.actions.royaltypack.TributeOrAusterityAction;
 import thePackmaster.cards.royaltypack.optioncards.NobleStrikeAusterity;
 import thePackmaster.cards.royaltypack.optioncards.NobleStrikeTribute;
@@ -37,8 +38,7 @@ public class NobleStrike extends AbstractRoyaltyCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        dmg(abstractMonster, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        this.addToBot(new GreedAction(
+        this.addToBot(new NobleStrikeAttackAction(
                 abstractMonster,
                 new DamageInfo(abstractPlayer, this.damage, this.damageTypeForTurn),
                 GOLD_GAINED));
