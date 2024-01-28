@@ -18,7 +18,7 @@ import static thePackmaster.SpireAnniversary5Mod.makeID;
 public class WillpowerTribute extends AbstractRoyaltyCard {
 
     public final static String ID = makeID("WillpowerTribute");
-    public final static int TRIBUTE_GOLD_AMOUNT = 10;
+    public final static int TRIBUTE_GOLD_AMOUNT = 15;
 
     public WillpowerTribute(){
         super(ID, -2, CardType.STATUS, CardRarity.SPECIAL, CardTarget.SELF, ThePackmaster.Enums.PACKMASTER_RAINBOW,
