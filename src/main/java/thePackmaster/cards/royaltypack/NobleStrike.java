@@ -26,7 +26,7 @@ public class NobleStrike extends AbstractRoyaltyCard {
     public NobleStrike(){
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.tags.add(CardTags.STRIKE);
-        baseDamage = 6;
+        baseDamage = 8;
         baseMagicNumber = magicNumber = 1;
     }
 
