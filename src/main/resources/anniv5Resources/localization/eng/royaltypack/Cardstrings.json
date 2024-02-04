@@ -1,8 +1,8 @@
 {
   "${ModID}:NobleStrike": {
     "NAME": "Noble Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain 5 Gold. NL Draw a card. NL ${ModID}:Tribute 5: Draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If Fatal, gain 5 Gold. NL Draw a card. NL ${ModID}:Tribute 5: Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a card. NL If Fatal, gain 5 Gold.  NL ${ModID}:Tribute 5: Draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw a card. NL If Fatal, gain 5 Gold. NL ${ModID}:Tribute 5: Draw !M! cards."
   },
   "${ModID}:NobleStrikeTribute": {
     "NAME": "Tribute",
