@@ -45,7 +45,7 @@ public class AlchemyTime extends AbstractRoyaltyCard implements OnObtainCard {
     public void onObtainCard(){
         AbstractDungeon.player.potionSlots += 1;
         AbstractDungeon.player.potions.add(new PotionSlot(AbstractDungeon.player.potionSlots - 1));
-        AbstractDungeon.player.gainGold(75);
+        AbstractDungeon.player.gainGold(74);
         CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
     }
 
